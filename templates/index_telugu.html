@@ -1,0 +1,69 @@
+<html >
+<head>
+  <title>Predict the Weight</title> 
+  <style>
+  input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  #button1 {
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    /* SET COLOR IN WHITE */
+  }
+  
+  #button1:hover {
+    background-color: white;
+    color: black;
+  }
+  </style> 
+</head>
+
+<body>
+  <div >
+    <h1>స్టాక్ మార్కెట్ న్యూస్ అగ్రిగేటర్</h1>
+  
+      <form action="{{ url_for('summarize_telugu')}}"method="post" >
+        <label for="stockSymbol">తెలుగు భాషలో స్టాక్ చిహ్నాన్ని నమోదు చేయండి</label>
+        <input type="text" name="stock_symbol"  required="required" /><br>
+        <button type="submit" value="Submit" id="button1" class="btn btn-primary btn-block btn-large">
+            సమర్పించండి</button>
+      </form>
+  
+     <br>
+     <br>
+     {{ output|safe }}
+  
+   </div>
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  h1{
+    text-align: center;
+    font-size: 60px;
+
+  }
+  body{
+    padding-top: 20px;
+  }
+  body {
+        background-image: url("https://i.makeagif.com/media/4-16-2021/H_RsAk.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .form input{
+    
+    text-align: center;
+    
+  }
+body {background-color: lightgrey;}
+h1   {color: black;}
+p    {color: red;}
+#button1 {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  #button1:hover {
+    background-color: white;
+    color: black;
+  
+  }
+  .button:active {
+    background-color: dimgrey;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+</style>
+</head>
+<body>
+
+
+<h1 style ="color:white;">Stock Market News Aggregator</h1>
+<form action="{{ url_for('mains')}}"method="post" >
+    <center><input type="submit" value="english" id="button1"></center><br><br>
+  </form>
+  <form action="{{ url_for('mains_telugu')}}"method="post" >
+    <center><input type="submit" value="తెలుగు" id="button1"></center>
+  </form>
+
+
+
+
+
+<p></p>
+
+</body>
+</html>
